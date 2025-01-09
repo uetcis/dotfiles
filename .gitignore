@@ -4,3 +4,4 @@ core
 credentials.json
 token.pickle
 *.png
+*.log
