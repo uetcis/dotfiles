@@ -288,7 +288,7 @@ spawn-at-startup "bash" "-c" "wl-paste --type image --watch cliphist store"
 spawn-at-startup "bash" "-c" "wl-paste --type text --watch ~/.config/niri/cliphist-store.fish"
 spawn-at-startup "blueman-applet"
 spawn-at-startup "fcitx5"
-spawn-at-startup "swaybg" "-m" "fill" "-i" "~/.config/hypr/background/yukino_1.png"
+spawn-at-startup "swaybg" "-m" "fill" "-i" "~/.config/niri/background/yukino_1.png"
 spawn-at-startup "swaync"
 spawn-at-startup "waybar"
 spawn-at-startup "/usr/bin/kdeconnectd"
@@ -515,8 +515,8 @@ binds {
     XF86AudioLowerVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
     XF86AudioMute { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
 
-    XF86MonBrightnessUp { spawn "bash" "-c" "sudo light -A 5"; }
-    XF86MonBrightnessDown { spawn "bash" "-c" "sudo light -U 5"; }
+    XF86MonBrightnessUp { spawn "bash" "-c" "brightnessctl set +5%"; }
+    XF86MonBrightnessDown { spawn "bash" "-c" "brightnessctl set 5%-"; }
 
     XF86Display { power-off-monitors; }
 
