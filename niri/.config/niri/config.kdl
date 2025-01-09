@@ -294,6 +294,7 @@ spawn-at-startup "waybar"
 spawn-at-startup "/usr/bin/kdeconnectd"
 // spawn-at-startup "ollama" "serve"
 spawn-at-startup "xwayland-satellite" ":9"
+spawn-at-startup "swayidle" "before-sleep" "swaylock"
 
 // You can override environment variables for processes spawned by niri.
 environment {
@@ -319,6 +320,7 @@ environment {
     // XDG_SESSION_TYPE "wayland"
     XMODIFIERS "@im=fcitx"
     LANG "en_US.UTF-8"
+    ELECTRON_OZONE_PLATFORM_HINT "wayland"
 }
 
 cursor {
@@ -520,8 +522,8 @@ binds {
 
     XF86Display { power-off-monitors; }
 
-    Mod+Shift+V { spawn "bash" "-c" "cliphist list | ~/.config/hypr/wofi -d | cliphist decode | wl-copy"; }
-    Mod+Shift+Ctrl+V { spawn "bash" "-c" "cliphist list | ~/.config/hypr/wofi -d | cliphist delete"; }
+    Mod+Shift+V { spawn "bash" "-c" "cliphist list | fuzzel -d | cliphist decode | wl-copy"; }
+    Mod+Shift+Ctrl+V { spawn "bash" "-c" "cliphist list | fuzzel -d | cliphist delete"; }
 
     Mod+W { spawn "~/.config/niri/close.fish"; }
 
