@@ -56,23 +56,23 @@
   },
   "scripts": {
     "webcord": {
-      "exec": "/home/weitcis/.config/swaync/handler.fish webcord",
+      "exec": "bash -c '~/.config/swaync/handler.fish webcord'",
       "app-name": "WebCord"
     },
     "telegram": {
-      "exec": "/home/weitcis/.config/swaync/handler.fish telegram",
+      "exec": "bash -c '~/.config/swaync/handler.fish telegram'",
       "app-name": "Telegram Desktop"
     },
     "thunderbird": {
-      "exec": "/home/weitcis/.config/swaync/handler.fish thunderbird",
+      "exec": "bash -c '~/.config/swaync/handler.fish thunderbird'",
       "app-name": "Thunderbird"
     },
     "nheko": {
-      "exec": "/home/weitcis/.config/swaync/handler.fish nheko",
+      "exec": "bash -c '~/.config/swaync/handler.fish nheko'",
       "app-name": "nheko"
     },
     "test": {
-      "exec": "/home/weitcis/.config/swaync/handler.fish test",
+      "exec": "bash -c '~/.config/swaync/handler.fish test'",
       "app-name": "notify-send"
     }
   }

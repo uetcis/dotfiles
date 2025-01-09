@@ -33,9 +33,9 @@ table.insert(lvim.builtin.cmp.sources, { name = "papis" })
 -- table.insert(lvim.builtin.cmp.sources, { name = "neorg" })
 -- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "jdtls" })
 
-vim.g.path_to_creds = '~/.config/lvim/credentials.json'
-vim.g.gdoc_file_path = '~/.config/lvim/'
-vim.g.token_directory = '~/.config/lvim/'
+-- vim.g.path_to_creds = '~/.config/lvim/credentials.json'
+-- vim.g.gdoc_file_path = '~/.config/lvim/'
+-- vim.g.token_directory = '~/.config/lvim/'
 
 lvim.plugins = {
   'gbprod/nord.nvim',
@@ -264,10 +264,10 @@ lvim.plugins = {
     'mfussenegger/nvim-jdtls',
     ft = 'java'
   },
-  {
-    'aadv1k/gdoc.vim',
-    build = './install.py'
-  },
+  -- {
+  --   'aadv1k/gdoc.vim',
+  --   build = './install.py'
+  -- },
   {
     'RaafatTurki/hex.nvim',
     config = function()

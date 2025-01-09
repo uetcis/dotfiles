@@ -4,7 +4,7 @@ logger "swaync handler.fish $argv"
 if test (swaync-client -D) = "true"
   logger "swaync handler.fish $argv[1] muted"
 else 
-  pw-cat --volume 1.5 -p /home/weitcis/.config/swaync/eurosounds/Sounds/private_message.wav
+  pw-cat --volume 1.5 -p ~/.config/swaync/eurosounds/Sounds/private_message.wav
 end
 
 switch $argv[1];
@@ -14,6 +14,6 @@ switch $argv[1];
     # logger $RES
     if test "$RES" != "NULL"
       echo $RES | wl-copy 
-      pw-cat --volume 1.5 -p /home/weitcis/.config/swaync/eurosounds/Sounds/handoff_accept.wav 
+      pw-cat --volume 1.5 -p ~/.config/swaync/eurosounds/Sounds/handoff_accept.wav 
     end
 end
