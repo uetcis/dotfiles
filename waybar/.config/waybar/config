@@ -156,7 +156,7 @@
       //"tooltip": false
     },
     "custom/niri-title": {
-      "exec": "/home/weitcis/.config/waybar/niri-title.fish",
+      "exec": "~/.config/waybar/niri-title.fish",
       "return-type": "json"
       //"interval": 1
     }
