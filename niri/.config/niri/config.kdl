@@ -72,7 +72,7 @@ input {
     // instead of power off.
     // Uncomment this if you would like to configure the power button elsewhere
     // (i.e. logind.conf).
-    disable-power-key-handling
+ //   disable-power-key-handling
 
     // Uncomment this to make the mouse warp to the center of newly focused windows.
     warp-mouse-to-focus
@@ -270,25 +270,25 @@ layout {
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
-//spawn-at-startup "/home/weitcis/.config/hypr/background.sh"
-//spawn-at-startup "/home/weitcis/.config/hypr/relaunch.sh"
+//spawn-at-startup "~/.config/hypr/background.sh"
+//spawn-at-startup "~/.config/hypr/relaunch.sh"
 //spawn-at-startup "/usr/bin/tpm-fido"
 //spawn-at-startup "[workspace 1 silent] firefox"
 //spawn-at-startup "[workspace 4 silent] thunderbird"
 //spawn-at-startup "aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log"
 //spawn-at-startup "rm -rf ~/.config/WebCord/windowState.json"
 //spawn-at-startup "sleep 5; while :; do if pstree | grep kdeconnectd >/dev/null; then sleep 5; else killall -9 kdeconnectd; /usr/lib/kdeconnectd; logger restarting kdeconnectd; fi; done"
-//spawn-at-startup "swww img /home/weitcis/.config/hypr/background/yukino_1.png"
-//spawn-at-startup "wl-paste --type text --watch /home/weitcis/.config/hypr/cliphist.sh"
-// spawn-at-startup "/home/weitcis/.config/hypr/audio.sh"
+//spawn-at-startup "swww img ~/.config/hypr/background/yukino_1.png"
+//spawn-at-startup "wl-paste --type text --watch ~/.config/hypr/cliphist.sh"
+// spawn-at-startup "~/.config/hypr/audio.sh"
 // spawn-at-startup "bash" "-c" "wl-paste --type text --watch cliphist store"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
-spawn-at-startup "bash" "-c" "dex -s /home/weitcis/.config/autostart/ -a"
+spawn-at-startup "bash" "-c" "dex -s ~/.config/autostart/ -a"
 spawn-at-startup "bash" "-c" "wl-paste --type image --watch cliphist store"
-spawn-at-startup "bash" "-c" "wl-paste --type text --watch /home/weitcis/.config/niri/cliphist-store.fish"
+spawn-at-startup "bash" "-c" "wl-paste --type text --watch ~/.config/niri/cliphist-store.fish"
 spawn-at-startup "blueman-applet"
 spawn-at-startup "fcitx5"
-spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/weitcis/.config/hypr/background/yukino_1.png"
+spawn-at-startup "swaybg" "-m" "fill" "-i" "~/.config/hypr/background/yukino_1.png"
 spawn-at-startup "swaync"
 spawn-at-startup "waybar"
 spawn-at-startup "/usr/bin/kdeconnectd"
@@ -504,7 +504,7 @@ binds {
     Super+F6 { spawn "swaylock"; }
 
     // You can also use a shell:
-    Mod+Space { spawn "/home/weitcis/.config/niri/drun.fish"; }
+    Mod+Space { spawn "~/.config/niri/drun.fish"; }
 
     Mod+N { spawn "bash" "-c" "swaync-client -op"; }
     Mod+M { spawn "bash" "-c" "alacritty -e yazi"; }
@@ -523,7 +523,7 @@ binds {
     Mod+Shift+V { spawn "bash" "-c" "cliphist list | ~/.config/hypr/wofi -d | cliphist decode | wl-copy"; }
     Mod+Shift+Ctrl+V { spawn "bash" "-c" "cliphist list | ~/.config/hypr/wofi -d | cliphist delete"; }
 
-    Mod+W { spawn "/home/weitcis/.config/niri/close.fish"; }
+    Mod+W { spawn "~/.config/niri/close.fish"; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
@@ -672,8 +672,8 @@ binds {
     // Mod+Shift+Space { switch-layout "prev"; }
 
     Shift+Print { spawn "bash" "-c" "grim -g \"$(slurp -o -c '#ff0000ff')\" - | swappy -f - -o - | wl-copy"; }
-    Shift+Ctrl+Print { spawn "/home/weitcis/.config/niri/screenshot.fish" "-screen"; }
-    Shift+Alt+Print { spawn "/home/weitcis/.config/niri/screenshot.fish" "-window"; }
+    Shift+Ctrl+Print { spawn "~/.config/niri/screenshot.fish" "-screen"; }
+    Shift+Alt+Print { spawn "~/.config/niri/screenshot.fish" "-window"; }
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }

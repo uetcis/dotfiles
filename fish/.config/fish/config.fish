@@ -22,7 +22,7 @@ if status is-interactive
 	starship init fish | source
 	# thefuck --alias | source
 	zoxide init fish | source
-  direnv hook fish | source
+	direnv hook fish | source
 	fzf_key_bindings
 	alias vim lvim
 	alias tp trash-put
