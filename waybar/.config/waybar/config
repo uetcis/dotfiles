@@ -1,0 +1,163 @@
+{
+    "layer": "top",
+    //"modules-left": ["hyprland/workspaces", "battery#0", "battery#1"],
+    //"modules-center": ["hyprland/window", "hyprland/submap"],
+    "modules-left": ["bluetooth", "network", "backlight", "wireplumber"],
+    "modules-center": ["custom/niri-title"],
+    "modules-right": ["tray", "custom/notification", "battery#0", "battery#1", "clock#2", "clock#3"],
+    //"modules-right": ["tray", "custom/notification", "battery#0", "battery#1", "clock#1", "clock#2", "clock#3"],
+    "height": 16,
+    "margin-top": 2,
+    "margin-left": 4,
+    //"margin-right": 0,
+    "wlr/workspaces": {
+      "format": "{name}",
+      "sort-by-number": true,
+      "tooltip": false,
+      "all-outputs": true,
+      "format-icons": {
+        "active": "",
+        "default": ""
+      },
+      "on-click": "activate",
+    },
+    "clock#1": {
+      "format": "{:%H%M}PT",
+      "tooltip": true,
+      "tooltip-format": "{:%Y-%m-%d}",
+      "timezone": "America/Los_Angeles",
+      //"format": "<span> </span>{:%H:%M}",
+    },
+    "clock#2": {
+      "format": "{:%H%M}z",
+      "tooltip": true,
+      "tooltip-format": "{:%Y-%m-%d}",
+      "timezone": "Etc/UTC",
+      //"format": "<span> </span>{:%H:%M}",
+    },
+    "clock#3": {
+      "format": "{:%H%MLT %b. %d %a}",
+      "tooltip": true,
+      "tooltip-format": "{:%Y-%m-%d}"
+      //"format": "<span> </span>{:%H:%M}",
+    },
+    "backlight": {
+      "device": "intel_backlight",
+      "format": "<span>{icon}</span> {percent}%",
+      "format-icons": ["", "", "", "", "", "", "", "", ""],
+      "tooltip": false,
+    },
+    "pulseaudio": {
+      "format": "<span>{icon}</span> {volume}%",
+      "format-muted": "",
+      "tooltip": false,
+      "format-icons": {
+        "headphone": "",
+        "default": ["", "", "󰕾", "󰕾", "󰕾", "", "", ""]
+      },
+      "scroll-step": 1,
+    },
+    "wireplumber" : {
+      "format": "<span>{icon}</span> {volume}%",
+      "format-muted": "",
+      "format-icons": {
+        "headphone": "",
+        "default": ["", "", "󰕾", "󰕾", "󰕾", "", "", ""]
+      },
+      "on-click": "pavucontrol",
+      "on-click-right": "helvum"
+    },
+    "bluetooth": {
+      "format": "<span></span> {status}",
+      "format-disabled": "", // an empty format will hide the module
+      "format-connected": "<span></span> {num_connections}",
+      "tooltip-format": "{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}   {device_address}",
+      "on-click": "blueman-manager",
+    },
+    "network": {
+      "interface": "wlan0",
+      "format": "{ifname}",
+      "format-wifi": "<span>  </span>{essid}",
+      "format-disconnected": "<span>󰖪 </span>No WLAN",
+      "tooltip-format": "{ipaddr}/{cidr}\nSignal Strength {signalStrength} ({signaldBm}dBm)\n{frequency}GHz",
+      "tooltip-format-disconnected": "wlan0 disconnected",
+    },
+    "battery#0": {
+      "bat": "BAT0",
+      "ac": "AC",
+      "format": "{capacity}%",
+      "states": {
+        "normal": 100,
+        "warning": 30,
+        "critical": 15
+      },
+      //"format": "<span>{icon}</span> {capacity}%",
+      //"format-icons": ["", "", "", "", "", "", "", "", "", ""],
+      //"format-full": "",
+      "format-critical": "||{capacity}%||",
+      //"format-discharging": "D {capacity}%",
+      //"format-charging": "C {capacity}%",
+      "tooltip": true,
+    },
+    "battery#1": {
+      "bat": "BAT1",
+      "ac": "AC",
+      "format": "{capacity}%",
+      "states": {
+        "normal": 100,
+        "warning": 30,
+        "critical": 15
+      },
+      //"format": "<span>{icon}</span> {capacity}%",
+      //"format-icons": ["", "", "", "", "", "", "", "", "", ""],
+      //"format-full": "",
+      "format-critical": "||{capacity}%||",
+      //"format-critical": "",
+      //"format-discharging": "D {capacity}%",
+      //"format-charging": "C {capacity}%",
+      "tooltip": true,
+    },
+    "hyprland/window": {
+      "format": "{}",
+      "separate-outputs": true
+    },
+    "tray": {
+      "icon-size": 20,
+      "spacing": 8
+    },
+    "custom/notification": {
+      "tooltip": false,
+      "format": "{icon}",
+      "format-icons": {
+        //"notification": "<span foreground='red'><sup></sup></span>",
+        "notification": "",
+        "none": "",
+        //"dnd-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-notification": "",
+        "dnd-none": "",
+        //"inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "inhibited-notification": "",
+        "inhibited-none": "",
+        //"dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-inhibited-notification": "",
+        "dnd-inhibited-none": ""
+      },
+      "return-type": "json",
+      "exec-if": "which swaync-client",
+      "exec": "swaync-client -swb",
+      "on-click": "swaync-client -t -sw",
+      "on-click-right": "swaync-client -d -sw",
+      "escape": true
+    },
+    "hyprland/submap": {
+      "format": "submap: {}",
+      //"max-length": 16,
+      //"tooltip": false
+    },
+    "custom/niri-title": {
+      "exec": "/home/weitcis/.config/waybar/niri-title.fish",
+      "return-type": "json"
+      //"interval": 1
+    }
+}

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+export GTK_IM_MODULE=''
+export QT_IM_MODULE=''
+export XMODIFIERS=''
+export SDL_IM_MODULE=''
+export GLFW_IM_MODULE=''
+
+wofi $1 $2 $3 $4

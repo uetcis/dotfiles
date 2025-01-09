@@ -1,0 +1,75 @@
+* {
+  border: none;
+  font-family: 'Sarasa UI CL', 'Sarasa Mono CL', sans-serif;/*, 'Noto Color Emoji';, 'Fira Code', 'Symbols Nerd Font Mono';*/
+  font-size: 14px;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+#workspaces {
+  border-radius: 8px;
+  background-color: #11111b;
+  margin-top: 4px;
+  margin-right: 12px;
+  margin-left: 8px;
+  padding-top: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#workspaces button {
+  background: #11111b;
+  margin-right: 1px;
+  margin-left: 1px;
+  padding-left: 1px;
+  padding-right: 1px;
+  color: #5e81ac;
+}
+
+#workspaces button.active {
+  font-weight: normal;
+  color: #81a1c1;
+}
+
+#tray, #window, #clock, #backlight, #wireplumber, #bluetooth, #network, #battery, #workspaces, #custom-notification, #submap, #custom-niri-title {
+  color: #81a1c1;
+  /*color: #cdd6f4;*/
+  border-radius: 8px;
+  background-color: #11111b;
+  margin-top: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 8px;
+}
+
+#backlight, #bluetooth, #tray {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-right: 5px;
+  margin-right: 0px;
+}
+
+#wireplumber, #network, #custom-notification {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-left: 5px;
+}
+
+#battery.discharging.warning {
+  color: #ebcb8b;
+}
+
+#battery.discharging.critical {
+  color: #bf616a;
+  font-weight: bold;
+}
+
+#battery.charging.warning, #battery.charging.critical {
+  color: #b48ead;
+}
+
+#battery.charging.normal {
+  color: #a3be8c;
+}
