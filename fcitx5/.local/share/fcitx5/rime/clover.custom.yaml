@@ -1,0 +1,5 @@
+__patch:
+# Rx: BlindingDark/rime-easy-en:customize:schema=clover {
+  - patch/+:
+      __include: easy_en:/patch
+# }

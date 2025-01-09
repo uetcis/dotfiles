@@ -6,3 +6,4 @@ token.pickle
 *.png
 *.log
 ssh/.ssh/id*
+*.userdb

@@ -1,0 +1,8 @@
+patch:
+  menu/page_size: 8
+  schema_list:
+    - schema: clover
+    - schema: japanese
+    - schema: easy_en
+  switcher/hotkeys: 
+      - Control+space
