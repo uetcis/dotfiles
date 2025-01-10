@@ -517,6 +517,9 @@ binds {
 
     Mod+W { spawn "~/.config/niri/close.fish"; }
 
+    Mod+T { toggle-window-floating; }
+    Mod+Shift+T { switch-focus-between-floating-and-tiling; }
+
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
     Mod+Up    { focus-window-up; }
