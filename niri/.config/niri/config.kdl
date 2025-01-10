@@ -270,18 +270,7 @@ layout {
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
-//spawn-at-startup "~/.config/hypr/background.sh"
-//spawn-at-startup "~/.config/hypr/relaunch.sh"
-//spawn-at-startup "/usr/bin/tpm-fido"
-//spawn-at-startup "[workspace 1 silent] firefox"
-//spawn-at-startup "[workspace 4 silent] thunderbird"
-//spawn-at-startup "aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log"
-//spawn-at-startup "rm -rf ~/.config/WebCord/windowState.json"
-//spawn-at-startup "sleep 5; while :; do if pstree | grep kdeconnectd >/dev/null; then sleep 5; else killall -9 kdeconnectd; /usr/lib/kdeconnectd; logger restarting kdeconnectd; fi; done"
 //spawn-at-startup "swww img ~/.config/hypr/background/yukino_1.png"
-//spawn-at-startup "wl-paste --type text --watch ~/.config/hypr/cliphist.sh"
-// spawn-at-startup "~/.config/hypr/audio.sh"
-// spawn-at-startup "bash" "-c" "wl-paste --type text --watch cliphist store"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "bash" "-c" "dex -s ~/.config/autostart/ -a"
 spawn-at-startup "bash" "-c" "wl-paste --type image --watch cliphist store"
@@ -289,6 +278,7 @@ spawn-at-startup "bash" "-c" "wl-paste --type text --watch ~/.config/niri/cliphi
 spawn-at-startup "blueman-applet"
 spawn-at-startup "fcitx5"
 spawn-at-startup "bash" "-c" "swaybg -m fill -i ~/.config/niri/background/yukino_1.png"
+spawn-at-startup "bash" "-c" "~/.config/niri/audio.sh"
 spawn-at-startup "swaync"
 spawn-at-startup "waybar"
 spawn-at-startup "/usr/bin/kdeconnectd"

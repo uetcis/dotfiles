@@ -5,17 +5,17 @@
 # 	exec dbus-launch --exit-with-session Hyprland
 # end
 
-if test (tty) = "/dev/tty2"
-  echo TTY4 Launching
-	sudo /home/weitcis/.config/hypr/escalated.sh
-  # nmcli connection up "Google Fi" &
-  #	exec bash -c "dbus-launch --exit-with-session niri 2>&1 | sudo tee /dev/tty4"
-  # exec dbus-launch --exit-with-session niri
+# if test (tty) = "/dev/tty2"
+#   echo TTY4 Launching
+# 	# sudo /home/weitcis/.config/hypr/escalated.sh
+#   # nmcli connection up "Google Fi" &
+#   #	exec bash -c "dbus-launch --exit-with-session niri 2>&1 | sudo tee /dev/tty4"
+#   # exec dbus-launch --exit-with-session niri
 
-  /home/weitcis/.config/hypr/audio.sh
-  set -x RUST_BACKTRACE full
-  exec dbus-launch --exit-with-session niri --session &> /home/weitcis/.config/niri/niri.log
-end
+#   /home/weitcis/.config/hypr/audio.sh
+#   set -x RUST_BACKTRACE full
+#   exec dbus-launch --exit-with-session niri --session &> /home/weitcis/.config/niri/niri.log
+# end
 
 if status is-interactive
 	set -x GPG_TTY (tty)
