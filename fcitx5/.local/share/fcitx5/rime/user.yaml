@@ -1,11 +1,11 @@
 var:
-  last_build_time: 1736427144
+  last_build_time: 1738009350
   option:
     full_shape: false
     simplification: true
   previously_selected_schema: clover
   schema_access_time:
-    clover: 1736432284
+    clover: 1738026570
     easy_en: 1710135139
     japanese: 1729500651
     luna_pinyin: 1677933867

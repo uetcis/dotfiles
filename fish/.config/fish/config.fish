@@ -24,7 +24,7 @@ if status is-interactive
 	zoxide init fish | source
 	direnv hook fish | source
 	fzf_key_bindings
-	alias vim lvim
+	alias vim nvim
 	alias tp trash-put
 	alias rm 'echo "This is not the command you are looking for."; false'
 	alias cd z
