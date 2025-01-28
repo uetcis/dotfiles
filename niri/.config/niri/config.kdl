@@ -132,9 +132,10 @@ output "DP-1" {
     position x=0 y=0
 }
 
-output "DP-1" {
+output "DP-2" {
     //off
-    scale 2.0
+    // scale 1.0
+    scale 1.5
     transform "normal"
     mode "3840x2160@59.997"
     //position x=0 y=1080
@@ -278,7 +279,7 @@ spawn-at-startup "bash" "-c" "wl-paste --type text --watch ~/.config/niri/cliphi
 spawn-at-startup "blueman-applet"
 spawn-at-startup "fcitx5"
 spawn-at-startup "bash" "-c" "swaybg -m fill -i ~/.config/niri/background/yukino_1.png"
-spawn-at-startup "bash" "-c" "~/.config/niri/audio.sh"
+// spawn-at-startup "bash" "-c" "~/.config/niri/audio.sh"
 spawn-at-startup "swaync"
 spawn-at-startup "waybar"
 spawn-at-startup "/usr/bin/kdeconnectd"
@@ -310,7 +311,8 @@ environment {
     // XDG_SESSION_TYPE "wayland"
     XMODIFIERS "@im=fcitx"
     LANG "en_US.UTF-8"
-    ELECTRON_OZONE_PLATFORM_HINT "wayland"
+    // ELECTRON_OZONE_PLATFORM_HINT "wayland"
+    EDITOR "lvim"
 }
 
 cursor {
@@ -791,9 +793,19 @@ window-rule {
 
     open-floating true
     open-focused false
-    default-column-width { fixed 480; }
-    default-window-height { fixed 270; }
+    default-column-width { proportion 0.2; }
+    default-window-height { proportion 0.2; }
     default-floating-position x=32 y=32 relative-to="bottom-right"
+}
+
+window-rule {
+  match app-id="blueman-manager"
+  match app-id="org.pulseaudio.pavucontrol"
+  match title="预览"
+
+  open-floating true
+  default-column-width { proportion 0.33333; }
+  default-window-height { proportion 0.5; }
 }
 
 window-rule {

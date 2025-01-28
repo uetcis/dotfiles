@@ -1,20 +1,20 @@
 __build_info:
   rime_version: 1.11.2
   timestamps:
-    clover.custom: 1736427079
-    clover.key_bindings: 1736427079
+    clover.custom: 1736426830
+    clover.key_bindings: 1736426830
     clover.key_bindings.custom: 0
-    clover.schema: 1736427079
-    default: 1736427079
-    default.custom: 1736427079
-    easy_en: 1736427079
+    clover.schema: 1736426830
+    default: 1736426830
+    default.custom: 1736426830
+    easy_en: 1736426830
     easy_en.custom: 0
-    easy_en.schema: 1736427079
-    key_bindings: 1736427079
+    easy_en.schema: 1736426830
+    key_bindings: 1736426830
     key_bindings.custom: 0
-    punctuation: 1736427079
+    punctuation: 1736426830
     punctuation.custom: 0
-    symbols: 1736427079
+    symbols: 1736426830
     symbols.custom: 0
 ascii_composer:
   good_old_caps_lock: true
