@@ -8,4 +8,6 @@ token.pickle
 *.bin
 ssh/.ssh/id*
 *.userdb
-build/**
+**/build/**
+fcitx5/.local/share/fcitx5/rime/installation.yaml
+fcitx5/.local/share/fcitx5/rime/user.yaml
