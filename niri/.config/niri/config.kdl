@@ -799,13 +799,15 @@ window-rule {
 }
 
 window-rule {
-  match app-id="blueman-manager"
-  match app-id="org.pulseaudio.pavucontrol"
-  match title="预览"
+    match app-id="blueman-manager"
+    match app-id="org.pulseaudio.pavucontrol"
+    match title="预览"
+    match app-id="org.telegram.desktop" title=r#"^Media viewer$"#
 
-  open-floating true
-  default-column-width { proportion 0.33333; }
-  default-window-height { proportion 0.5; }
+    open-floating true
+    open-fullscreen false
+    default-column-width { proportion 0.33333; }
+    default-window-height { proportion 0.5; }
 }
 
 window-rule {
@@ -817,3 +819,4 @@ window-rule {
     match app-id=r#"^gtg$"#
     open-on-workspace "gtd"
 }
+// vi: sw=4
