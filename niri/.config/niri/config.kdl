@@ -312,7 +312,7 @@ environment {
     XMODIFIERS "@im=fcitx"
     LANG "en_US.UTF-8"
     // ELECTRON_OZONE_PLATFORM_HINT "wayland"
-    EDITOR "lvim"
+    EDITOR "nvim"
 }
 
 cursor {
