@@ -178,7 +178,7 @@ layout {
     // You can change how the focus ring looks.
     focus-ring {
         // Uncomment this line to disable the focus ring.
-        // off
+        //off
 
         // How many logical pixels the ring extends out from the windows.
         width 4
@@ -213,18 +213,18 @@ layout {
     }
 
     // You can also add a border. It's similar to the focus ring, but always visible.
-//    border {
-//        // The settings are the same as for the focus ring.
-//        // If you enable the border, you probably want to disable the focus ring.
-//        off
-//
-//        width 4
-//        active-color "#ffc87f"
-//        inactive-color "#505050"
-//
-//        // active-gradient from="#ffbb66" to="#ffc880" angle=45 relative-to="workspace-view"
-//        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
-//    }
+    border {
+        // The settings are the same as for the focus ring.
+        // If you enable the border, you probably want to disable the focus ring.
+        off
+
+        width 4
+        active-color "#7fc8ff"
+        inactive-color "#505050"
+
+        // active-gradient from="#ffbb66" to="#ffc880" angle=45 relative-to="workspace-view"
+        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+    }
 
     // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
     preset-column-widths {
@@ -818,5 +818,10 @@ window-rule {
 window-rule {
     match app-id=r#"^gtg$"#
     open-on-workspace "gtd"
+}
+
+window-rule {
+    match is-focused=true
+    draw-border-with-background false
 }
 // vi: sw=4

@@ -18,26 +18,26 @@
 # end
 
 if status is-interactive
-	set -x GPG_TTY (tty)
-	starship init fish | source
-	# thefuck --alias | source
-	zoxide init fish | source
-	direnv hook fish | source
-	fzf_key_bindings
-	alias vim nvim
-	alias tp trash-put
-	alias rm 'echo "This is not the command you are looking for."; false'
-	alias cd z
-	alias ls exa
+  set -x GPG_TTY (tty)
+  starship init fish | source
+  # thefuck --alias | source
+  zoxide init fish | source
+  direnv hook fish | source
+  fzf_key_bindings
+  alias vim nvim
+  alias tp trash-put
+  alias rm 'echo "This is not the command you are looking for."; false'
+  alias cd z
+  alias ls exa
 end
 
 function y
-	set tmp (mktemp -t "yazi-cwd.XXXXXX")
-	yazi $argv --cwd-file="$tmp"
-	if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-		builtin cd -- "$cwd"
-	end
-	/bin/rm -f -- "$tmp"
+  set tmp (mktemp -t "yazi-cwd.XXXXXX")
+  yazi $argv --cwd-file="$tmp"
+  if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+    builtin cd -- "$cwd"
+  end
+  /bin/rm -f -- "$tmp"
 end
 
 function spawn
@@ -56,3 +56,12 @@ page_template = \"blog-page.html\"
 " > $filename
   env $EDITOR $filename
 end
+
+
+  # BEGIN opam configuration
+  # This is useful if you're using opam as it adds:
+  #   - the correct directories to the PATH
+  #   - auto-completion for the opam binary
+  # This section can be safely removed at any time if needed.
+  test -r '/home/weitcis/.opam/opam-init/init.fish' && source '/home/weitcis/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
+  # END opam configuration

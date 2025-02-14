@@ -36,7 +36,7 @@
       //"format": "<span> </span>{:%H:%M}",
     },
     "clock#3": {
-      "format": "{:%H%MLT %b. %d %a}",
+      "format": "{:%H%MLT %m/%d/%y %a}",
       "tooltip": true,
       "tooltip-format": "{:%Y-%m-%d}"
       //"format": "<span> </span>{:%H:%M}",
