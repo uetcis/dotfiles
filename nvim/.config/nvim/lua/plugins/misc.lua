@@ -32,4 +32,10 @@ return {
       require('nvim-tree').setup {}
     end,
   },
+  {
+    'andrewferrier/wrapping.nvim',
+    config = function()
+      require('wrapping').setup()
+    end,
+  },
 }

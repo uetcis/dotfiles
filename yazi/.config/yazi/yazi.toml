@@ -34,10 +34,10 @@ open = [
 reveal = [
 	{ run = 'open -R "$1"', desc = "Reveal", for = "macos" },
 	{ run = 'explorer /select,%1', orphan = true, desc = "Reveal", for = "windows" },
-	{ run = '''exiftool "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show EXIF", for = "unix" },
+	{ run = 'nautilus -s "$1"', orphan = true, desc = "Reveal", for = "unix" },
 ]
 extract = [
-	{ run = 'unar "$1"', desc = "Extract here", for = "unix" },
+	{ run = 'unzip "$1" -d "$1".extracted/', desc = "Extract here", for = "unix" },
 	{ run = 'unar "%1"', desc = "Extract here", for = "windows" },
 ]
 okular = [

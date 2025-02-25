@@ -286,6 +286,7 @@ spawn-at-startup "/usr/bin/kdeconnectd"
 // spawn-at-startup "ollama" "serve"
 spawn-at-startup "xwayland-satellite" ":9"
 spawn-at-startup "swayidle" "before-sleep" "swaylock"
+spawn-at-startup "udiskie"
 
 // You can override environment variables for processes spawned by niri.
 environment {
@@ -502,7 +503,7 @@ binds {
 
     Mod+N { spawn "bash" "-c" "swaync-client -op"; }
     Mod+M { spawn "bash" "-c" "alacritty -e yazi"; }
-    Mod+E { spawn "bash" "-c" "alacritty -e lvim"; }
+    Mod+E { spawn "bash" "-c" "alacritty -e nvim"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     XF86AudioRaiseVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
