@@ -57,6 +57,26 @@ page_template = \"blog-page.html\"
   env $EDITOR $filename
 end
 
+function envelope
+  set sample_addr (echo -e $SENDER_ADDR | string collect)
+
+  set sender (mktemp)
+  set receiver (mktemp)
+  echo $sample_addr > $sender
+  echo $sample_addr > $receiver
+  env $EDITOR $sender
+  env $EDITOR $receiver
+
+  set output (mktemp)
+  typst compile ~/Code/envelope/envelope.typ -f pdf \
+    --input=sender=(cat $sender | string collect) \
+    --input=receiver=(cat $receiver | string collect) \
+    --input=extra=$argv $output
+  open $output
+  read -P "Confirm?" && lpr -o PageSize=Env10 $output || echo Cancelled
+  /bin/rm $output $sender $receiver
+end
+
 
   # BEGIN opam configuration
   # This is useful if you're using opam as it adds:
