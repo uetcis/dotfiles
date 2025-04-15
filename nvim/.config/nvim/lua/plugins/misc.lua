@@ -2,6 +2,11 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
+--
+local function getWords()
+  return tostring(vim.fn.wordcount().words)
+end
+
 return {
   'tpope/vim-fugitive',
   {
@@ -36,6 +41,27 @@ return {
     'andrewferrier/wrapping.nvim',
     config = function()
       require('wrapping').setup()
+    end,
+  },
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      require('lualine').setup {
+        options = {
+          -- ... your lualine config
+          theme = 'nord',
+          -- ... your lualine config
+        },
+        sections = {
+          lualine_a = { 'mode' },
+          lualine_b = { 'branch', 'diff', 'diagnostics' },
+          lualine_c = { 'filename' },
+          lualine_x = { getWords, 'encoding', 'fileformat', 'filetype' },
+          lualine_y = { 'progress' },
+          lualine_z = { 'location' },
+        },
+      }
     end,
   },
 }
