@@ -195,6 +195,13 @@ return {
           --  filetypes = { 'haskell', 'lhaskell', 'cabal' },
           autostart = false,
         },
+        tinymist = {
+          settings = {
+            formatterMode = 'typstyle',
+            exportPdf = 'onType',
+            semanticTokens = 'disable',
+          },
+        },
       }
 
       -- Ensure the servers and tools above are installed

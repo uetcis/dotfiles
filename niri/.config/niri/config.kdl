@@ -124,8 +124,9 @@ output "eDP-1" {
 
 output "DP-1" {
     //off
-    scale 2.0
+    scale 1.5
     // transform "normal"
+    transform "normal"
     // transform "90"
     mode "3840x2160@59.997"
     // mode "2560x1440"
@@ -318,7 +319,7 @@ environment {
     GDK_SCALE "2"
     GLFW_IM_MODULE "ibus"
     GTK_IM_MODULE "wayland"
-    LIBVA_DRIVER_NAME "iHD"
+    //LIBVA_DRIVER_NAME "iHD"
     QT_IM_MODULE "fcitx"
     QT_QPA_PLATFORM "wayland"
     QT_QPA_PLATFORMTHEME "qt5ct"
@@ -798,6 +799,7 @@ workspace "Xwayland" {
 
 window-rule {
     match app-id=r#"^firefox$"#
+    match app-id=r#"^brave-browser$"#
     open-maximized true
     open-on-workspace "main"
 }
@@ -830,6 +832,11 @@ window-rule {
     open-fullscreen true
 }
 
+window-rule {
+    match app-id="gamescope"
+    open-fullscreen true
+}
+
 // window-rule {
 //     match title=r#"^Extension"#
 //     open-floating true
@@ -842,6 +849,7 @@ window-rule {
 // Open the Firefox picture-in-picture window as floating with 480×270 size.
 window-rule {
     match app-id="firefox" title="Picture-in-Picture"
+    match title="Picture in picture"
 
     open-floating true
     open-focused false
@@ -856,6 +864,8 @@ window-rule {
     match title="预览"
     match app-id="org.telegram.desktop" title=r#"^Media viewer$"#
     match title="New Text Note — Okular"
+    match title="Bitwarden"
+    match app-id="brave-nngceckbapebfimnlniiiahkandclblb-Default"
 
     open-floating true
     open-fullscreen false
